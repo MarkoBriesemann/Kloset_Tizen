@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta id="viewport" name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=10">
+    <title>Kloset</title>
+    <link rel="stylesheet" href="css/kloset.min.css">
+    <link rel="stylesheet" href="css/jquery-mobile.css">
+    <!--   <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/slideJS.css">
+    <script src="js/jquery.hammer.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    
+    <!--<script type="text/javascript" src="js/cordova-1.5.0.js"></script>-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-mobile.min.js"></script>
+</head>
+<style>
+
+.cbutton{display:block;width:100px;height:100px;border-radius:50px;font-size:20px;color:#fff;line-height:100px;text-align:center;background:#fff}
+
+
+.cbutton2{ display:block;float: left;width:100px;height:100px;border-radius:50px;font-size:20px;text-align:center;background:#000}
+
+</style>
+
+
+<body>
+
+<!-- Login Page -->
+<div data-role="page" data-theme="a" id="pageLogin">
+    <br>
+
+    <div align="center">
+        <img src="./img/kloset_logo.png">
+    </div>
+
+    <div data-role="content" id="identification">
+        <a href="#" data-role="button" data-theme="c">Facebook</a> <a
+        href="#" data-role="button" data-theme="b">Twitter</a>
+
+        <form method="GET" data-ajax="false" onsubmit="return false;">
+            <label for="loginEmail"></label>
+            <input type="email" name="loginEmail" data-theme="b" id="loginEmail" placeholder="Email" >
+            <label for="loginPassword"></label>
+            <input type="password" name="loginPassword" data-theme="b" id="loginPassword" value=""
+            placeholder="Password here">
+            <!--<button id="connect" onclick="login()">Sign in</button>-->
+            
+            <!--  <button style="background-color:#000000;" id="connect">
+			<a href="login()" id="connect" class="button button-circle button-highlight">CONNECT</button>-->
+			<button   id="connect">Connect</button>
+			<div class="cbutton">
+			<a href="login()" id="connect" class=" icon-back_icon "></a>
+			</div>
+	
+        </form>
+        <span id="error" class="error">There is a problem with your identifiers</span>
+        <div class="float">
+            <a href="#pageRegister">Sign up</a>
+            <a href="#lost">Did you loose your password</a>
+            <a href="#pageDemo">Have a look inside. Slide Demo.</a>
+        </div>
+    </div>
+</div>
+
+<!-- lost Pwd Page -->
+<!--<div data-role="page" id="lost" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-position="fixed">
+        <h1>Password lost ?</h1>
+    </div>
+
+    <div data-role="content">
+        <p>
+            What you did loose your password? <br> HA ha, that happens to
+            me every day... Enter your email and we send it back to you.
+        </p>
+
+        <form>
+            <label for="idlost"></label> <input type="email" data-theme="b"
+            name="idlost" id="idlost" value="" placeholder="Your email">
+            <a data-theme="c" href="#login" data-role="button">Send me the
+                email</a>
+        </form>
+    </div>
+</div>
+
+<!-- Registration Page -->
+<div data-role="page" id="pageRegister" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-position="fixed">
+        <h1>New Kloseter</h1>
+    </div>
+
+    <div data-role="content" id="registerContent">
+        <form>
+            <label for="registerEmail">Votre adresse email</label>
+            <input data-theme="b" type="email" name="registerEmail" id="registerEmail" value="" placeholder="Votre e-mail">
+            <label for="registerPassword">Mot de passe</label>
+            <input data-theme="b" type="password" data-clear-btn="false" name="registerPassword" id="registerPassword" value="" autocomplete="off"
+            placeholder="Sandrinedu59">
+            <label for="registerPassword2">Rataper votre mot de passe</label>
+            <input data-theme="b" type="password" data-clear-btn="false" name="registerPassword2" id="registerPassword2" value="" autocomplete="off"
+            placeholder="Sandrinedu59">
+            <label for="registerName">Votre nom</label>
+            <input data-theme="b" type="text" name="name" id="registerName" value="" placeholder="Votre nom">
+            <!--<a href="#" data-theme="c" data-role="button" id="register" onclick="register()">Sign up</a>-->
+            <a href="#" data-theme="c" data-role="button" id="register">Sign up</a>
+        </form>
+    </div>
+</div>
+
+<!-- Demo Page 1 -->
+<div data-role="page" id="pageDemo" data-theme="a" >
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demo</h1>
+    </div>
+    	<div id="demo" >
+    	 	<img id="1" src='./img/demo/0_Kloset-Background.jpg' alt='Photo 1'>    	 	
+    	 </div>
+ <div data-role="footer" data-position="fixed">
+        <h1>Get a better view on your closet...<a href="#pageDemo2">next</a></h1>
+    </div>
+</div>
+
+<!-- Demo Page 2 -->
+<div data-role="page" id="pageDemo2" data-theme="a" >
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demo</h1>
+    </div>
+    	<div id="demo" >
+    	 	<img id="2" src='./img/demo/1_Kloset_UI_homepage.jpg' alt='Photo 2'>    	 	
+    	 </div>
+ 	<div data-role="footer" data-position="fixed">
+        <h1>with a well organized wardrobe...<a href="#pageDemo3">next</a></h1>
+    </div>
+</div>
+
+
+<!-- Demo Page 3 -->
+<div data-role="page" id="pageDemo3" data-theme="a" >
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demo</h1>
+    </div>
+    <div data-role="content" id="demoContent">
+    	<div id="demo" style="margin-left: -15px;" >
+    	 	<img id="4" src='./img/demo/2_Kloset_UI_wardrobe.jpg' alt='Photo 4'>
+    	 </div>
+    </div>
+     <div data-role="footer" data-position="fixed">
+        <h1>high detailed resolution...<a href="#pageDemo4">next</a></h1>
+    </div>
+</div>
+
+
+<!-- Demo Page 4 -->
+<div data-role="page" id="pageDemo4" data-theme="a" >
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demo</h1>
+    </div>
+    	<div id="demo" >
+    	 	<img id="4" src='./img/demo/3_Kloset_UI_filters.jpg' alt='Photo 4'>  	 	
+    	 </div>
+ 	<div data-role="footer" data-position="fixed">
+        <h1>choose whats important...<a href="#pageDemo5">next</a></h1>
+    </div>
+</div>
+
+
+<!-- Demo Page 5 -->
+<div data-role="page" id="pageDemo5" data-theme="a" >
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demo</h1>
+    </div>
+    <div data-role="content" id="demoContent">
+    	<div id="demo" style="margin-left: -15px;">
+    	 	<img id="5" src='./img/demo/4_Kloset_UI_preview.jpg' alt='Photo 5'>
+    	 </div>
+    </div>
+     <div data-role="footer" data-position="fixed">
+        <h1>create your styles...<a href="#Register">register</a></h1>
+    </div>
+</div>
+
+<!-- Demo Page slider-->
+<div data-role="page" id="pageDemoslider" data-theme="a" data-add-back-btn="true">
+    <div data-role="header" data-position="fixed">
+        <h1>Kloset Demonstration</h1>
+    </div>
+
+    <div data-role="content" id="demoContent">
+      	
+		<div id="demo" style="-webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+			<img id="1" src='./img/demo/4_Kloset_UI_preview.jpg' alt='Photo 1'>
+			<img id="2" src='./img/demo/0_Kloset-Background.jpg' alt='Photo 2'>
+			<img id="3" src='./img/demo/1_Kloset_UI_homepage.jpg' alt='Photo 3'>
+			<img id="4" src='./img/demo/2_Kloset_UI_wardrobe.jpg' alt='Photo 4'>
+			<img id="5" src='./img/demo/3_Kloset_UI_filters.jpg' alt='Photo 5'>
+				
+		</div>
+    </div>
+    <script src="js/demo.js"></script>
+</div>
+
+
+<script src="js/client.js"></script>
+</body>
+</html>

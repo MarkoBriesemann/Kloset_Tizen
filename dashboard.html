@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta id="viewport" name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=10">
+    <title>Kloset</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script type="text/javascript" src="js/cordova-1.5.0.js"></script>-->
+    <script src="js/jquery.min.js"></script>
+</head>
+<style>
+
+.cbutton{ display:block;float: left;width:100px;height:100px;border-radius:50px;font-size:20px;text-align:center;background:#000}
+
+</style>
+
+<body>
+<div class="dashboard">
+    <img src="img/bg.jpg">
+</div>
+<div class="footerSup">
+	<div class="cbutton" style="margin-left: 10%;margin-right: 30%;">
+    	<button  class="icon-cintre_icon" onclick="navToWardrobe()"></button>
+    </div>
+    <div class="cbutton">
+    	<button class="icon-scan_icon"></button>
+    </div>
+</div>
+<nav>
+    <button class="icon-menu_icon"></button>
+    <button class="icon-home_icon"></button>
+    <button class="icon-back_icon" ></button>
+</nav>
+<script>
+    function navToWardrobe() {
+        window.location.href = 'wardrobe.html';
+    }
+</script>
+</body>
+</html>

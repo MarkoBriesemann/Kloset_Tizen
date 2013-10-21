@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta id="viewport" name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=10">
+    <title>Kloset</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--<script type="text/javascript" src="js/cordova-1.5.0.js"></script>-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.hammer.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <style>
+        #wardrobe img{
+            display: none;
+        }
+
+		.cbutton{ display:block;float: left;width:100px;height:100px;border-radius:50px;font-size:20px;text-align:center;background:#000}
+
+    </style>
+</head>
+<body>
+
+
+<div id="wardrobe">
+    <!--<img id="imgCaroussel" src="">
+    <p id="nameCaroussel"></p>-->
+</div>
+<div class="footerSup">
+	<div class="cbutton" style="margin-left: 10%;margin-right: 30%;">
+    	<button  class="icon-filter_icon" id="navToFilter"></button>
+    </div>
+    <div class="cbutton">
+    	<button class="icon-eye_icon" id="navToView"></button>
+    </div>
+</div>
+
+<nav>
+    <button class="icon-menu_icon"></button>
+    <button class="icon-home_icon"></button>
+    <button class="icon-back_icon" id="navBack"></button>
+</nav>
+<script src="js/wardrobe.js"></script>
+</body>
+</html>
